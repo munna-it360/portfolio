@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Munna — IT System Administrator & Network Engineer</title>
+<meta name="description" content="Md Munna — IT System Administrator and Network Engineer based in Dhaka, Bangladesh. Infrastructure, networking, automation, and AI-powered enterprise reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#10161d;
+  --bg-2:#151c25;
+  --card:#1a222d;
+  --card-2:#202a37;
+  --line:#28323f;
+  --text:#e9eef4;
+  --text-soft:#b3bfcc;
+  --text-mute:#7e8a98;
+  --accent:#4fd1c5;
+  --accent-dark:#3fbcb0;
+  --accent-dim:rgba(79,209,197,.1);
+  --sidebar-w:315px;
+  --radius:16px;
+  --font:'Poppins',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--text);line-height:1.75;font-size:15.5px;background:radial-gradient(1000px 600px at 85% -5%, rgba(79,209,197,.05), transparent 60%),radial-gradient(800px 500px at -10% 40%, rgba(79,140,209,.04), transparent 60%),var(--bg);background-attachment:fixed}
+::selection{background:var(--accent);color:#0d1319}
+a{color:var(--accent);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+img{max-width:100%}
+
+/* ================= SIDEBAR ================= */
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);background:var(--bg-2);border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:44px 30px 28px;text-align:center;z-index:40;overflow-y:auto}
+.avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;position:relative;flex-shrink:0;border:3px solid var(--line);outline:2px solid rgba(79,209,197,.65);outline-offset:5px}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1}
+.avatar .initial{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.2rem;font-weight:700;color:var(--accent);background:#1e2833}
+.sidebar h1{margin-top:22px;font-size:1.55rem;font-weight:700;letter-spacing:.01em}
+.typed-wrap{margin-top:6px;height:26px;font-family:var(--mono);font-size:.84rem;color:var(--text-soft)}
+.typed-wrap .typed{color:var(--accent)}
+.typed-wrap .tcursor{display:inline-block;width:8px;background:var(--accent);animation:blink 1s steps(1) infinite;height:14px;vertical-align:-1px;margin-left:2px}
+@keyframes blink{50%{opacity:0}}
+.side-menu{margin-top:26px;width:100%;list-style:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}
+.side-menu a{display:block;padding:9px 0;color:var(--text-soft);font-size:.9rem;font-weight:500;transition:color .2s,letter-spacing .2s}
+.side-menu a:hover,.side-menu a.active{color:var(--accent)}
+.socials{margin-top:22px;display:flex;gap:11px;justify-content:center}
+.socials a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s,transform .15s}
+.socials a:hover{border-color:var(--accent);background:var(--accent-dim);transform:translateY(-2px)}
+.socials svg{width:17px;height:17px;stroke:var(--text-soft);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.socials a:hover svg{stroke:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.88rem;letter-spacing:.02em;transition:transform .15s,box-shadow .2s,background .2s,color .2s;cursor:pointer;border:none;font-family:var(--font)}
+.btn-accent{background:var(--accent);color:#0d1319;box-shadow:0 10px 26px -12px rgba(79,209,197,.35)}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.side-cv{margin-top:24px;width:100%}
+.side-cv .btn{width:100%}
+.side-foot{margin-top:auto;padding-top:24px;font-family:var(--mono);font-size:.66rem;color:var(--text-mute)}
+.side-foot .tick{color:var(--accent)}
+
+/* ================= MAIN ================= */
+.main{margin-left:var(--sidebar-w)}
+section{scroll-margin-top:8px;padding:92px 68px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+@media(max-width:1250px){section{padding:78px 44px}}
+.sec-title{position:relative;margin-bottom:54px}
+.sec-title .ghost{position:absolute;top:-36px;left:-8px;font-size:5.4rem;font-weight:800;color:rgba(233,238,244,.028);letter-spacing:.05em;text-transform:uppercase;line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
+.sec-title h2{position:relative;font-size:2rem;font-weight:700;letter-spacing:.01em}
+.sec-title h2 em{font-style:normal;color:var(--accent)}
+.sec-title .bar{width:48px;height:3px;background:var(--accent);border-radius:2px;margin-top:14px}
+.sub-label{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:14px}
+.sub-label::before{content:'';width:24px;height:1px;background:var(--accent)}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  .tcursor{animation:none}
+}
+
+/* ================= HOME / HERO ================= */
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;background:
+  radial-gradient(640px 420px at 88% 8%, rgba(79,209,197,.06), transparent 60%), var(--bg)}
+.hero .hello{font-family:var(--mono);font-size:.95rem;color:var(--text-soft)}
+.hero .hello b{color:var(--accent);font-weight:500}
+.hero h2.big{margin-top:18px;font-size:clamp(2rem,4.2vw,3.3rem);font-weight:800;line-height:1.16;letter-spacing:-.01em;max-width:20em}
+.hero h2.big em{font-style:normal;color:var(--accent)}
+.hero .intro{margin-top:22px;color:var(--text-soft);max-width:38em;font-size:1.03rem}
+.hero-cta{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap}
+.hero-counters{margin-top:56px;display:flex;gap:0;flex-wrap:wrap}
+.hc{padding:0 44px;border-left:1px solid var(--line)}
+.hc:first-child{padding-left:0;border-left:none}
+.hc b{font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1.1;display:block}
+.hc span{font-size:.84rem;color:var(--text-mute);line-height:1.4;display:block;margin-top:4px}
+@media(max-width:760px){.hc{padding:0 22px}.hc b{font-size:1.9rem}}
+
+/* ================= WORKS ================= */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.fbtn{background:none;border:1px solid var(--line);color:var(--text-soft);padding:8px 22px;border-radius:999px;font-size:.84rem;font-weight:500;cursor:pointer;font-family:var(--font);transition:all .2s}
+.fbtn:hover{border-color:var(--accent);color:var(--accent)}
+.fbtn.active{background:var(--accent);border-color:var(--accent);color:#0d1319;font-weight:600}
+.works-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:940px){.works-grid{grid-template-columns:1fr}}
+.work{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .3s cubic-bezier(.22,.61,.36,1),border-color .3s,box-shadow .3s}
+.work:hover{transform:translateY(-4px);border-color:rgba(79,209,197,.55);box-shadow:0 18px 44px -22px rgba(0,0,0,.55)}
+.work.hide{display:none}
+.work-visual{position:relative;height:170px;display:flex;align-items:center;justify-content:center;background:
+  linear-gradient(135deg,#1e2836 0%,#151c25 100%)}
+.work-visual::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(79,209,197,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(79,209,197,.05) 1px,transparent 1px);background-size:34px 34px}
+.work-visual svg{width:58px;height:58px;stroke:var(--accent);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;position:relative;filter:drop-shadow(0 6px 18px rgba(79,209,197,.3))}
+.work-visual .wtag{position:absolute;top:14px;left:16px;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:rgba(20,21,24,.75);border:1px solid var(--line);padding:4px 11px;border-radius:999px}
+.work-body{padding:24px 26px 26px}
+.work h3{font-size:1.1rem;font-weight:600}
+.work p{margin-top:9px;color:var(--text-mute);font-size:.88rem;line-height:1.65}
+.work .wvalue{margin-top:14px;padding:11px 15px;background:var(--accent-dim);border-left:3px solid var(--accent);border-radius:0 9px 9px 0;font-size:.84rem;color:var(--text-soft)}
+.work .wvalue strong{color:var(--accent)}
+.work .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:.72rem;background:var(--bg-2);border:1px solid var(--line);border-radius:7px;padding:4px 10px;color:var(--text-soft)}
+a.chip{color:var(--accent)}
+a.chip:hover{border-color:var(--accent)}
+
+/* ================= SERVICES ================= */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:transform .2s,border-color .2s;display:flex;flex-direction:column}
+.svc:hover{transform:translateY(-4px);border-color:rgba(79,209,197,.55);box-shadow:0 18px 44px -22px rgba(0,0,0,.55)}
+.svc .ico{width:56px;height:56px;border-radius:14px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.svc .ico svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:1.12rem;font-weight:600}
+.svc p{margin-top:10px;color:var(--text-mute);font-size:.9rem;line-height:1.65;flex:1}
+.svc .get{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.88rem;color:var(--accent)}
+.svc .get:hover{gap:12px}
+.svc .get::after{content:'→';transition:transform .2s}
+
+/* ================= RESUME ================= */
+.resume-block+.resume-block{margin-top:56px}
+.resume-block>h3{font-size:1.15rem;font-weight:700;margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.resume-block>h3 svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:900px){.rgrid{grid-template-columns:1fr}}
+.r-item{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:border-color .2s,transform .2s}
+.r-item:hover{border-color:rgba(79,209,197,.5);transform:translateY(-2px);box-shadow:0 14px 36px -20px rgba(0,0,0,.5)}
+.r-item .when{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;background:var(--accent-dim);color:var(--accent);padding:3px 13px;border-radius:999px}
+.r-item h4{margin-top:12px;font-size:1.04rem;font-weight:600}
+.r-item .org{color:var(--text-mute);font-size:.85rem;margin-top:2px}
+.r-item p{margin-top:10px;color:var(--text-soft);font-size:.88rem;line-height:1.65}
+.r-item .cert-btn{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.8rem;font-weight:600;color:#0d1319;background:var(--accent);padding:7px 18px;border-radius:999px;cursor:pointer;border:none;font-family:var(--font);transition:background .2s,transform .15s}
+.r-item .cert-btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+
+/* ================= SKILLS ================= */
+.feat-skills{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:56px}
+@media(max-width:1100px){.feat-skills{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.feat-skills{grid-template-columns:1fr}}
+.fskill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;text-align:center;transition:transform .3s cubic-bezier(.22,.61,.36,1),border-color .3s,box-shadow .3s}
+.fskill:hover{transform:translateY(-4px);border-color:rgba(79,209,197,.55);box-shadow:0 18px 44px -22px rgba(0,0,0,.55)}
+.fskill .ring{position:relative;width:96px;height:96px;margin:0 auto 16px}
+.fskill svg.circ{transform:rotate(-90deg)}
+.fskill .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.15rem;font-weight:700;color:var(--accent)}
+.fskill h4{font-size:.95rem;font-weight:600}
+.fskill p{font-size:.78rem;color:var(--text-mute);margin-top:3px}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 64px}
+@media(max-width:900px){.skills-grid{grid-template-columns:1fr}}
+.skill-col h3{font-size:1.08rem;font-weight:700;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.skill-col h3::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.sk{margin-bottom:18px}
+.sk .sk-top{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:8px}
+.sk .sk-top b{font-weight:500;color:var(--text-soft)}
+.sk .sk-top span{font-family:var(--mono);font-size:.76rem;color:var(--accent)}
+.sk .track{height:6px;background:#28323f;border-radius:99px;overflow:hidden}
+.sk .fill{height:100%;width:0;background:var(--accent);border-radius:99px;transition:width 1.2s cubic-bezier(.25,.7,.3,1)}
+.knowledge{columns:2;column-gap:44px;list-style:none;margin-top:4px}
+@media(max-width:640px){.knowledge{columns:1}}
+.knowledge li{padding:7px 0;font-size:.9rem;color:var(--text-soft);display:flex;gap:10px;align-items:baseline;break-inside:avoid}
+.knowledge li::before{content:'✓';color:var(--accent);font-weight:700;font-size:.8rem}
+
+/* ================= CONTACT ================= */
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:34px}
+@media(max-width:900px){.contact-cards{grid-template-columns:1fr}}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-align:center;transition:transform .3s cubic-bezier(.22,.61,.36,1),border-color .3s,box-shadow .3s}
+.ccard:hover{transform:translateY(-3px);border-color:rgba(79,209,197,.5);box-shadow:0 14px 36px -20px rgba(0,0,0,.5)}
+.ccard .cico{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:var(--accent-dim);display:flex;align-items:center;justify-content:center}
+.ccard svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ccard .k{font-size:.74rem;color:var(--text-mute);text-transform:uppercase;letter-spacing:.1em}
+.ccard .v{font-size:.95rem;font-weight:600;margin-top:4px;display:block;color:var(--text)}
+a.v:hover{color:var(--accent)}
+.contact-bottom{display:grid;grid-template-columns:minmax(0,760px);justify-content:center}
+
+.cform{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.cform h3{font-size:1.3rem;font-weight:700;margin-bottom:22px}
+.cform h3 em{font-style:normal;color:var(--accent)}
+.cform .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.cform .frow{grid-template-columns:1fr}}
+.cform input,.cform textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:13px 16px;color:var(--text);font-family:var(--font);font-size:.92rem;margin-bottom:16px;transition:border-color .2s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent)}
+.cform textarea{min-height:130px;resize:vertical}
+.cform .note{font-size:.77rem;color:var(--text-mute);margin-top:10px}
+
+footer{padding:26px 68px;text-align:center;font-family:var(--mono);font-size:.74rem;color:var(--text-mute)}
+footer .tick{color:var(--accent)}
+
+/* ================= LIGHTBOX ================= */
+.lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(8,12,17,.92);backdrop-filter:blur(6px)}
+.lightbox.open{display:flex}
+.lb-panel{position:relative;max-width:min(660px,94vw);max-height:90vh;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.9)}
+.lb-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.lb-head h4{font-size:.92rem;font-weight:600}
+.lb-close{background:none;border:1px solid var(--line);color:var(--text-soft);border-radius:9px;padding:6px 13px;font-family:var(--mono);font-size:.76rem;cursor:pointer;transition:border-color .2s,color .2s}
+.lb-close:hover{border-color:var(--accent);color:var(--accent)}
+.lb-body{overflow:auto;background:#0c1218;display:flex;justify-content:center}
+.lb-body img{max-width:100%;height:auto;display:block}
+
+/* ================= MOBILE ================= */
+@media(max-width:1000px){
+  .sidebar{position:static;width:100%;border-right:none;border-bottom:1px solid var(--line);padding:40px 24px 30px}
+  .side-menu{display:none}
+  .main{margin-left:0}
+  section{padding:64px 24px}
+  .hero{min-height:auto;padding:64px 24px}
+  .sec-title .ghost{font-size:3.4rem;top:-22px}
+  .side-foot{margin-top:24px}
+  footer{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+  <div class="avatar">
+    <div class="initial">M</div>
+    <img src="https://avatars.githubusercontent.com/u/174939525?v=4" alt="Md Munna" onerror="this.style.display='none'">
+  </div>
+  <h1>Md Munna</h1>
+  <div class="typed-wrap"><span class="typed" id="typed"></span><span class="tcursor"></span></div>
+  <ul class="side-menu">
+    <li><a href="#home" data-sec="home">About</a></li>
+    <li><a href="#works" data-sec="works">Works</a></li>
+    <li><a href="#services" data-sec="services">Services</a></li>
+    <li><a href="#resume" data-sec="resume">Resume</a></li>
+    <li><a href="#skills" data-sec="skills">Skills</a></li>
+    <li><a href="#contact" data-sec="contact">Contact</a></li>
+  </ul>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/md-munna-253269177/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></svg></a>
+    <a href="https://github.com/munna-it360" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+    <a href="mailto:munna.it360@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    <a href="tel:+8801405090089" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  </div>
+  <div class="side-cv">
+    <a class="btn btn-accent" href="Md_Munna_CV.pdf" download>Download CV
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>
+    </a>
+  </div>
+  <div class="side-foot"><span class="tick">✓</span> © <span id="yr"></span> Md Munna · Dhaka, Bangladesh</div>
+</aside>
+
+<main class="main">
+
+<!-- ================= HOME / HERO ================= -->
+<section id="home" class="hero">
+  <div class="reveal in">
+    <div class="hello">Hello, I'm <b>Md Munna</b> 👋</div>
+    <h2 class="big">IT System Administrator <em>&</em> Network Engineer based in <em>Dhaka, Bangladesh.</em></h2>
+    <p class="intro">4+ years of experience architecting and maintaining high-availability, secure infrastructure for 300+ user environments. Proficient in full-stack management — from network security and virtualization to automation, monitoring, and AI-powered enterprise reporting. Actively advancing in Cloud and DevOps.</p>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="#contact">Hire Me</a>
+      <a class="btn btn-ghost" href="#works">My Works</a>
+    </div>
+    <div class="hero-counters">
+      <div class="hc"><b><span data-count="4">0</span>+</b><span>Years of<br>Experience</span></div>
+      <div class="hc"><b><span data-count="99">0</span>%</b><span>Uptime,<br>Critical Services</span></div>
+      <div class="hc"><b><span data-count="300">0</span>+</b><span>Users<br>Supported</span></div>
+      <div class="hc"><b><span data-count="4">0</span></b><span>Professional<br>Certifications</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORKS ================= -->
+<section id="works">
+  <div class="sec-title reveal">
+    <div class="ghost">Portfolio</div>
+    <h2>Port<em>folio</em></h2>
+    <div class="bar"></div>
+  </div>
+  <div class="filters reveal">
+    <button class="fbtn active" data-filter="all">All</button>
+    <button class="fbtn" data-filter="ai">AI</button>
+    <button class="fbtn" data-filter="infra">Infrastructure</button>
+    <button class="fbtn" data-filter="web">Web</button>
+    <button class="fbtn" data-filter="automation">Automation</button>
+  </div>
+  <div class="works-grid">
+
+    <div class="work reveal" data-cat="infra">
+      <div class="work-visual"><span class="wtag">Infrastructure</span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
+      <div class="work-body">
+        <h3>Physical-to-Virtual Migration & Network Redesign</h3>
+        <p>Migrated physical servers to high-availability Proxmox VE + Docker; redesigned the network as segmented VLANs on Cisco & MikroTik with VRRP and stateful firewalls; own the corporate email platform (Zextras Carbonio/Zimbra) end to end with Zabbix monitoring in front of it all.</p>
+        <div class="wvalue"><strong>Value:</strong> 99% uptime for critical services, 30% better resource utilization, 24/7 secure communication for every user.</div>
+        <div class="chips"><span class="chip">Proxmox VE</span><span class="chip">Docker</span><span class="chip">Cisco / MikroTik</span><span class="chip">Zabbix</span></div>
+      </div>
+    </div>
+
+    <div class="work reveal" data-cat="ai">
+      <div class="work-visual"><span class="wtag">AI · Reporting</span><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+      <div class="work-body">
+        <h3>Conversational AI over a Live ERP</h3>
+        <p>Led the build and hardening of an AI reporting platform — chat interface plus KPI dashboards over two company databases — auditing every SQL tool the model can call and fixing critical data bugs, including an 8.9× KPI inflation error caught before it reached leadership.</p>
+        <div class="wvalue"><strong>Value:</strong> Verified answers in seconds instead of days, over an $84M+ LC portfolio.</div>
+        <div class="chips"><span class="chip">FastAPI</span><span class="chip">React + TS</span><span class="chip">SQL Server</span><span class="chip">LLM tool-calling</span></div>
+      </div>
+    </div>
+
+    <div class="work reveal" data-cat="ai">
+      <div class="work-visual"><span class="wtag">AI · On-premise</span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div class="work-body">
+        <h3>Group KPI Platform with Fully Local AI</h3>
+        <p>Three-tier architecture — production ERP, isolated report server, dedicated GPU inference node — so the AI assistant runs entirely on-premise, with role-based views for executives, finance, operations, and audit.</p>
+        <div class="wvalue"><strong>Value:</strong> Board-level data gets AI-grade analysis while never leaving the company network.</div>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">Local LLM</span><span class="chip">Embeddings</span><span class="chip">RBAC</span></div>
+      </div>
+    </div>
+
+    <div class="work reveal" data-cat="automation">
+      <div class="work-visual"><span class="wtag">Automation</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+      <div class="work-body">
+        <h3>Customs Declaration Automation (ASYCUDA)</h3>
+        <p>Desktop tool with an embedded database of 500+ company profiles, OCR with image preprocessing, and direct generation of submission-ready customs XML from scanned Bill of Entry documents.</p>
+        <div class="wvalue"><strong>Value:</strong> Hours of error-prone typing → seconds of automated extraction; 100% field accuracy on digital documents.</div>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Tesseract OCR</span><span class="chip">OpenCV</span><span class="chip">XML</span></div>
+      </div>
+    </div>
+
+    <div class="work reveal" data-cat="web">
+      <div class="work-visual"><span class="wtag">Web · E-commerce</span><svg viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg></div>
+      <div class="work-body">
+        <h3>Retail Storefronts, End to End</h3>
+        <p>Complete e-commerce experiences — storefront, cart & coupon logic, zone-based delivery pricing, order tracking, PDF invoicing, and full staff admin panels — plus a staging deployment on Node.js and PostgreSQL.</p>
+        <div class="wvalue"><strong>Value:</strong> Operations-complete online businesses without enterprise licensing costs.</div>
+        <div class="chips"><a class="chip" href="https://github.com/munna-it360/eons-it-store" target="_blank" rel="noopener">eons-it-store ↗</a><a class="chip" href="https://github.com/munna-it360/gj-lifestyle-demo" target="_blank" rel="noopener">gj-lifestyle-demo ↗</a></div>
+      </div>
+    </div>
+
+    <div class="work reveal" data-cat="infra">
+      <div class="work-visual"><span class="wtag">Security</span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+      <div class="work-body">
+        <h3>Email & Identity Hardening (Microsoft 365)</h3>
+        <p>Audited every mailbox for suspicious forwarding rules via PowerShell, blocked external auto-forwarding at policy level, disabled legacy authentication, and wired up alerting for new rule creation.</p>
+        <div class="wvalue"><strong>Value:</strong> A silent, high-impact breach vector eliminated — before an incident, not after one.</div>
+        <div class="chips"><span class="chip">Exchange Online</span><span class="chip">PowerShell</span><span class="chip">Defender</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="sec-title reveal">
+    <div class="ghost">Services</div>
+    <h2>Serv<em>ices</em></h2>
+    <div class="bar"></div>
+  </div>
+  <div class="svc-grid">
+    <div class="svc reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
+      <h3>Server & Virtualization Infrastructure</h3>
+      <p>Physical-to-virtual migration, Proxmox VE & Docker platform design, Windows & Linux server administration, and backup/disaster-recovery discipline — engineered for 99% uptime and 100% data integrity.</p>
+      <a class="get" href="#contact">Get Started</a>
+    </div>
+    <div class="svc reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><path d="M12 7.4V12M12 12l-5.2 4.8M12 12l5.2 4.8"/></svg></div>
+      <h3>Network Design & Security</h3>
+      <p>Segmented VLAN architecture on Cisco & MikroTik with VRRP and stateful firewalls — certified engineering (CCNA, MTCNA/RE/SE) that eliminates single points of failure and hardens the perimeter.</p>
+      <a class="get" href="#contact">Get Started</a>
+    </div>
+    <div class="svc reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+      <h3>AI-Powered Enterprise Reporting</h3>
+      <p>LLM integration over live ERP data with fully on-premise inference. Executives get verified answers in seconds — every AI query audited like production code, and data never leaves the network.</p>
+      <a class="get" href="#contact">Get Started</a>
+    </div>
+    <div class="svc reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+      <h3>Monitoring, Automation & Email Systems</h3>
+      <p>Zabbix proactive monitoring, n8n + Python/Bash/PowerShell automation, and end-to-end enterprise email ownership (Carbonio/Zimbra, DNS/SPF/DKIM, Microsoft 365 hardening).</p>
+      <a class="get" href="#contact">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESUME ================= -->
+<section id="resume">
+  <div class="sec-title reveal">
+    <div class="ghost">Resume</div>
+    <h2>Res<em>ume</em></h2>
+    <div class="bar"></div>
+  </div>
+
+  <div class="resume-block reveal">
+    <h3><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Experience</h3>
+    <div class="rgrid">
+      <div class="r-item">
+        <span class="when">2024 — Present</span>
+        <h4>Senior Executive, IT</h4>
+        <div class="org">Union Limited · Dhaka, Bangladesh</div>
+        <p>Infrastructure modernization to Proxmox VE & Docker (30% better utilization, 99% uptime). Segmented VLAN network on Cisco & MikroTik with VRRP and stateful firewalls. End-to-end ownership of the corporate email platform. Zabbix monitoring with n8n + Bash/Python automation. Vendor & SLA management; AI-powered ERP reporting at executive level.</p>
+      </div>
+      <div class="r-item">
+        <span class="when">2021 — 2024</span>
+        <h4>Executive, IT</h4>
+        <div class="org">Union Limited · Dhaka, Bangladesh</div>
+        <p>Tier 1/2 technical support for 250+ end-users with staff productivity above 98%. Daily backup and disaster recovery with 100% data integrity. Standardized workstation lifecycle (OS imaging, software configuration, email setup), cutting onboarding time by 40%.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="resume-block reveal">
+    <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>Certifications</h3>
+    <div class="rgrid">
+      <div class="r-item">
+        <span class="when">Cisco</span>
+        <h4>CCNA — Cisco Certified Network Associate</h4>
+        <div class="org">Cisco Systems</div>
+        <p>Enterprise networking fundamentals: routing & switching, IP services, security fundamentals, and network automation.</p>
+        <button class="cert-btn cert-view" data-cert="certs/ccna.jpg" data-title="CCNA — Cisco Certified Network Associate">Certificate</button>
+      </div>
+      <div class="r-item">
+        <span class="when">MikroTik</span>
+        <h4>MTCNA — Certified Network Associate</h4>
+        <div class="org">MikroTik</div>
+        <p>RouterOS administration: routing, bridging, wireless, firewall/NAT, QoS, and tunneling fundamentals.</p>
+        <button class="cert-btn cert-view" data-cert="certs/mtcna.jpg" data-title="MTCNA — MikroTik Certified Network Associate">Certificate</button>
+      </div>
+      <div class="r-item">
+        <span class="when">MikroTik</span>
+        <h4>MTCRE — Certified Routing Engineer</h4>
+        <div class="org">MikroTik</div>
+        <p>Advanced routing: static & dynamic routing (OSPF), VPN tunneling, and complex multi-network design.</p>
+        <button class="cert-btn cert-view" data-cert="certs/mtcre.jpg" data-title="MTCRE — MikroTik Certified Routing Engineer">Certificate</button>
+      </div>
+      <div class="r-item">
+        <span class="when">MikroTik</span>
+        <h4>MTCSE — Certified Security Engineer</h4>
+        <div class="org">MikroTik</div>
+        <p>Network security engineering: attack mitigation, firewall hardening, secure tunnels, and IPsec.</p>
+        <button class="cert-btn cert-view" data-cert="certs/mtcse.jpg" data-title="MTCSE — MikroTik Certified Security Engineer">Certificate</button>
+      </div>
+      <div class="r-item">
+        <span class="when">In Progress</span>
+        <h4>AWS Solutions Architect — Associate</h4>
+        <div class="org">Amazon Web Services</div>
+        <p>Designing resilient, high-performing, secure, and cost-optimized architectures on AWS Cloud.</p>
+      </div>
+      <div class="r-item">
+        <span class="when">In Progress</span>
+        <h4>AI Systems Engineering</h4>
+        <div class="org">Professional development</div>
+        <p>Engineering discipline for production AI systems: LLM integration, evaluation, and deployment guardrails.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="resume-block reveal">
+    <h3><svg viewBox="0 0 24 24"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>Education</h3>
+    <div class="rgrid">
+      <div class="r-item">
+        <span class="when">2022</span>
+        <h4>B.Sc. in Computer Science</h4>
+        <div class="org">Fareast International University</div>
+        <p>CGPA 3.40 out of 4.00.</p>
+      </div>
+      <div class="r-item">
+        <span class="when">2014</span>
+        <h4>Higher Secondary Certificate (Science)</h4>
+        <div class="org">Brahmanbaria Govt. College · Cumilla Board</div>
+        <p>GPA 3.30 out of 5.00.</p>
+      </div>
+      <div class="r-item">
+        <span class="when">2012</span>
+        <h4>Secondary School Certificate (Science)</h4>
+        <div class="org">Bijeshwar A. Monem High School · Cumilla Board</div>
+        <p>GPA 4.19 out of 5.00.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="sec-title reveal">
+    <div class="ghost">Skills</div>
+    <h2>Sk<em>ills</em></h2>
+    <div class="bar"></div>
+  </div>
+
+  <div class="feat-skills">
+    <div class="fskill reveal">
+      <div class="ring" data-pct="90"><svg class="circ" width="96" height="96"><circle cx="48" cy="48" r="42" stroke="#28323f" stroke-width="7" fill="none"/><circle class="ring-fill" cx="48" cy="48" r="42" stroke="#4fd1c5" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg><b>90%</b></div>
+      <h4>Proxmox VE</h4><p>Virtualization</p>
+    </div>
+    <div class="fskill reveal">
+      <div class="ring" data-pct="90"><svg class="circ" width="96" height="96"><circle cx="48" cy="48" r="42" stroke="#28323f" stroke-width="7" fill="none"/><circle class="ring-fill" cx="48" cy="48" r="42" stroke="#4fd1c5" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg><b>90%</b></div>
+      <h4>MikroTik</h4><p>MTCNA · MTCRE · MTCSE</p>
+    </div>
+    <div class="fskill reveal">
+      <div class="ring" data-pct="85"><svg class="circ" width="96" height="96"><circle cx="48" cy="48" r="42" stroke="#28323f" stroke-width="7" fill="none"/><circle class="ring-fill" cx="48" cy="48" r="42" stroke="#4fd1c5" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg><b>85%</b></div>
+      <h4>Cisco Networking</h4><p>CCNA certified</p>
+    </div>
+    <div class="fskill reveal">
+      <div class="ring" data-pct="80"><svg class="circ" width="96" height="96"><circle cx="48" cy="48" r="42" stroke="#28323f" stroke-width="7" fill="none"/><circle class="ring-fill" cx="48" cy="48" r="42" stroke="#4fd1c5" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg><b>80%</b></div>
+      <h4>Python</h4><p>Automation & tooling</p>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-col reveal">
+      <h3>Tools & Platforms</h3>
+      <div class="sk"><div class="sk-top"><b>Linux / Windows Server</b><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>Zabbix</b><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>n8n Automation</b><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>Docker</b><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>SQL Server · PostgreSQL</b><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>LLM Integration (local inference)</b><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+    </div>
+    <div class="skill-col reveal">
+      <h3>Scripting & Languages</h3>
+      <div class="sk"><div class="sk-top"><b>Bash</b><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>PowerShell</b><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>JavaScript / Node.js / React</b><span>70%</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+      <div class="sk" style="margin-top:30px"><div class="sk-top"><b>Bangla</b><span>Native</span></div><div class="track"><div class="fill" data-w="100"></div></div></div>
+      <div class="sk"><div class="sk-top"><b>English</b><span>Professional</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+    </div>
+  </div>
+
+  <div style="margin-top:48px" class="reveal">
+    <h3 style="font-size:1.08rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></span>Soft Skills & Knowledge</h3>
+    <ul class="knowledge">
+      <li>Problem solving & root-cause analysis</li>
+      <li>Cross-functional collaboration</li>
+      <li>Vendor management & SLA negotiation</li>
+      <li>Communication & leadership</li>
+      <li>High-availability infrastructure design</li>
+      <li>Backup & disaster recovery</li>
+      <li>Least-privilege & RBAC access design</li>
+      <li>KPI reconciliation & data auditing</li>
+      <li>Technical documentation culture</li>
+      <li>Time management & adaptability</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" style="border-bottom:none">
+  <div class="sec-title reveal">
+    <div class="ghost">Contact</div>
+    <h2>Con<em>tact</em></h2>
+    <div class="bar"></div>
+  </div>
+
+  <div class="contact-cards">
+    <div class="ccard reveal">
+      <div class="cico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+      <div class="k">Phone</div>
+      <a class="v" href="tel:+8801405090089">+880 1405-090089</a>
+    </div>
+    <div class="ccard reveal">
+      <div class="cico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+      <div class="k">Email</div>
+      <a class="v" href="mailto:munna.it360@gmail.com">munna.it360@gmail.com</a>
+    </div>
+    <div class="ccard reveal">
+      <div class="cico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+      <div class="k">Address</div>
+      <span class="v">Dhaka, Bangladesh</span>
+    </div>
+  </div>
+
+  <div class="contact-bottom">
+    <form class="cform reveal" id="contactForm">
+      <h3>Let's make your project <em>brilliant!</em></h3>
+      <div class="frow">
+        <input type="text" id="fName" placeholder="Your Name" required>
+        <input type="email" id="fEmail" placeholder="Your Email" required>
+      </div>
+      <input type="text" id="fSubject" placeholder="Subject" required>
+      <textarea id="fMsg" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-accent">Send Message</button>
+      <div class="note">Submitting opens your email app with the message pre-filled — no data is stored on this site.</div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+  <div class="lb-panel">
+    <div class="lb-head">
+      <h4 id="lbTitle">Certificate</h4>
+      <button class="lb-close" id="lbClose">Close ✕</button>
+    </div>
+    <div class="lb-body"><img id="lbImg" src="" alt="Certificate"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Typewriter roles ---------- */
+const roles = ['System Administrator','Network Engineer','Infrastructure Specialist','AI Integration Engineer','Full-stack Developer'];
+const typedEl = document.getElementById('typed');
+if (reduced) {
+  typedEl.textContent = roles[0];
+} else {
+  let ri = 0, ci = 0, deleting = false;
+  (function type(){
+    const word = roles[ri];
+    typedEl.textContent = word.slice(0, ci);
+    if (!deleting && ci < word.length) { ci++; setTimeout(type, 75); }
+    else if (!deleting) { deleting = true; setTimeout(type, 1600); }
+    else if (ci > 0) { ci--; setTimeout(type, 38); }
+    else { deleting = false; ri = (ri + 1) % roles.length; setTimeout(type, 350); }
+  })();
+}
+
+/* ---------- Scroll reveals ---------- */
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- Counters ---------- */
+function animateCount(el){
+  const target = parseInt(el.dataset.count, 10);
+  if (reduced){ el.textContent = target; return; }
+  const dur = 1300, start = performance.now();
+  (function tick(now){
+    const p = Math.min(((now || performance.now()) - start) / dur, 1);
+    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(tick);
+  })();
+}
+document.querySelectorAll('[data-count]').forEach(el => {
+  const obs = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting){ animateCount(el); obs.unobserve(el); } });
+  }, {threshold:.6});
+  obs.observe(el);
+});
+
+/* ---------- Ring gauges ---------- */
+document.querySelectorAll('.ring').forEach(ring => {
+  const pct = parseInt(ring.dataset.pct, 10);
+  const circle = ring.querySelector('.ring-fill');
+  const C = 263.9;
+  const obs = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting){
+        circle.style.transition = reduced ? 'none' : 'stroke-dashoffset 1.3s cubic-bezier(.25,.7,.3,1)';
+        circle.style.strokeDashoffset = C * (1 - pct / 100);
+        obs.unobserve(ring);
+      }
+    });
+  }, {threshold:.5});
+  obs.observe(ring);
+});
+
+/* ---------- Skill bars ---------- */
+document.querySelectorAll('.fill').forEach(el => {
+  const obs = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting){
+        if (reduced) el.style.transition = 'none';
+        el.style.width = el.dataset.w + '%';
+        obs.unobserve(el);
+      }
+    });
+  }, {threshold:.5});
+  obs.observe(el);
+});
+
+/* ---------- Works filter ---------- */
+const fbtns = document.querySelectorAll('.fbtn');
+const works = document.querySelectorAll('.work');
+fbtns.forEach(btn => btn.addEventListener('click', () => {
+  fbtns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const f = btn.dataset.filter;
+  works.forEach(w => w.classList.toggle('hide', f !== 'all' && w.dataset.cat !== f));
+}));
+
+/* ---------- Certificate lightbox ---------- */
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbTitle = document.getElementById('lbTitle');
+document.querySelectorAll('.cert-view').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    lbImg.src = el.dataset.cert;
+    lbImg.alt = el.dataset.title;
+    lbTitle.textContent = el.dataset.title;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
+document.getElementById('lbClose').addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+
+
+/* ---------- Reliable in-page navigation ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const id = link.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
+  });
+});
+
+/* ---------- In-page navigation (works everywhere, incl. embedded previews) ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target){
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+      history.replaceState(null, '', a.getAttribute('href'));
+    }
+  });
+});
+
+/* ---------- Sidebar menu active state ---------- */
+const menuLinks = document.querySelectorAll('.side-menu a');
+const secObs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting){
+      menuLinks.forEach(l => l.classList.toggle('active', l.dataset.sec === e.target.id));
+    }
+  });
+}, { rootMargin: '-35% 0px -60% 0px' });
+document.querySelectorAll('section[id]').forEach(s => secObs.observe(s));
+
+/* ---------- Contact form → mailto ---------- */
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('fName').value.trim();
+  const email = document.getElementById('fEmail').value.trim();
+  const subject = document.getElementById('fSubject').value.trim();
+  const msg = document.getElementById('fMsg').value.trim();
+  const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+  window.location.href = 'mailto:munna.it360@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
+});
+</script>
+</body>
+</html>
