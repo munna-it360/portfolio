@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10161d">
+<title>Md Munna — IT System Administrator &amp; Network Engineer</title>
+<meta name="description" content="IT System Administrator and Network Engineer based in Dhaka, Bangladesh.">
+<meta name="author" content="Md Munna">
+<link rel="canonical" href="https://munna-it360.github.io/portfolio/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Md Munna">
+<meta property="og:title" content="Md Munna — IT System Administrator &amp; Network Engineer">
+<meta property="og:description" content="Infrastructure, networking, automation, and AI-powered enterprise reporting.">
+<meta property="og:image" content="img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json" id="ldjson">{}</script>
+</head>
+<body>
+
+<a class="skip" href="#home">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<div class="boot" id="boot"><div class="spin"></div></div>
+
+<!-- ===== SIDE RAIL (desktop) ===== -->
+<aside class="rail" aria-label="Profile and navigation">
+  <div class="avatar" id="avatar"></div>
+  <p class="rail-name" id="railName"></p>
+  <p class="typed-wrap"><span class="typed" id="typed"></span><span class="tcursor"></span></p>
+  <p class="avail" id="avail" hidden></p>
+  <nav class="rail-nav" id="railNav" aria-label="Sections"></nav>
+  <div class="socials" id="railSocials"></div>
+  <div class="rail-cv" id="railCv"></div>
+  <p class="rail-foot" id="railFoot"></p>
+</aside>
+
+<!-- ===== TOPBAR (mobile / tablet) ===== -->
+<header class="topbar">
+  <div class="topbar-id">
+    <span id="tbAvatar"></span>
+    <span><b id="tbName"></b><span id="tbRole"></span></span>
+  </div>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu">
+  <div class="drawer-head">
+    <span>Navigate</span>
+    <button class="modal-close" id="drawerClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav id="drawerNav" aria-label="Sections"></nav>
+  <div class="socials" id="drawerSocials"></div>
+  <div id="drawerCv"></div>
+</aside>
+
+<main class="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="section hero" id="home">
+    <p class="hello" id="hello"></p>
+    <h1 id="heroTitle"></h1>
+    <p class="intro" id="heroIntro"></p>
+    <div class="hero-cta" id="heroCta"></div>
+
+    <div class="console">
+      <div class="console-bar">
+        <span class="lhs"><span class="dot"></span><b id="consoleLabel"></b>· all systems nominal</span>
+        <span class="clock" id="clock"></span>
+      </div>
+      <div class="console-grid" id="stats"></div>
+    </div>
+  </section>
+
+  <!-- ===== WORKS ===== -->
+  <section class="section" id="works">
+    <header class="sec-head reveal">
+      <span class="ghost" aria-hidden="true">Portfolio</span>
+      <p class="eyebrow">Selected work</p>
+      <h2>Port<em>folio</em></h2>
+      <div class="bar"></div>
+    </header>
+    <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="grid-2" id="worksGrid"></div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <header class="sec-head reveal">
+      <span class="ghost" aria-hidden="true">Services</span>
+      <p class="eyebrow">What I take on</p>
+      <h2>Serv<em>ices</em></h2>
+      <div class="bar"></div>
+    </header>
+    <div class="grid-2" id="servicesGrid"></div>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section class="section" id="resume">
+    <header class="sec-head reveal">
+      <span class="ghost" aria-hidden="true">Resume</span>
+      <p class="eyebrow">Track record</p>
+      <h2>Res<em>ume</em></h2>
+      <div class="bar"></div>
+    </header>
+
+    <div class="rblock reveal">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Experience</h3>
+      <div class="grid-2" id="experience"></div>
+    </div>
+
+    <div class="rblock reveal">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>Certifications</h3>
+      <div class="grid-2" id="certs"></div>
+    </div>
+
+    <div class="rblock reveal">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>Education</h3>
+      <div class="grid-2" id="education"></div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <header class="sec-head reveal">
+      <span class="ghost" aria-hidden="true">Skills</span>
+      <p class="eyebrow">Depth of practice</p>
+      <h2>Sk<em>ills</em></h2>
+      <div class="bar"></div>
+    </header>
+    <div class="feat" id="featSkills"></div>
+    <div class="skill-cols" id="skillCols"></div>
+    <div class="know-wrap reveal" id="knowWrap">
+      <h3 id="knowTitle"></h3>
+      <ul class="knowledge" id="knowledge"></ul>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <header class="sec-head reveal">
+      <span class="ghost" aria-hidden="true">Contact</span>
+      <p class="eyebrow">Start a conversation</p>
+      <h2>Con<em>tact</em></h2>
+      <div class="bar"></div>
+    </header>
+
+    <div class="ccards" id="ccards"></div>
+
+    <div class="cform-wrap">
+      <form class="card cform reveal" id="contactForm" novalidate>
+        <h3 id="formTitle"></h3>
+        <div class="frow">
+          <div class="field">
+            <label for="fName">Your name</label>
+            <input id="fName" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="fEmail">Your email</label>
+            <input id="fEmail" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="fSubject">Subject</label>
+          <input id="fSubject" name="subject" type="text">
+        </div>
+        <div class="field">
+          <label for="fMsg">Message</label>
+          <textarea id="fMsg" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent" id="sendBtn">Send message</button>
+        <p class="formmsg" id="formMsg" role="status" aria-live="polite"></p>
+        <p class="note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="foot" id="pageFoot"></footer>
+</main>
+
+<button class="totop" id="totop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<!-- ===== CERTIFICATE MODAL ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <h4 id="modalTitle">Certificate</h4>
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalImg"></div>
+  </div>
+</div>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

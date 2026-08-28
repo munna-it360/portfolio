@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Content manager — Md Munna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<!-- ===== GATE ===== -->
+<div class="gate" id="gate">
+  <div class="gate-box">
+    <h1>Content manager</h1>
+    <p>Edit everything on the portfolio, then publish to GitHub.</p>
+    <div class="f">
+      <label for="pass">Passcode</label>
+      <input id="pass" type="password" autocomplete="current-password" placeholder="Enter passcode">
+    </div>
+    <button class="btn btn-accent btn-block" id="unlock">Unlock</button>
+    <p class="warn">
+      <b>Read this once.</b> This page is served publicly by GitHub Pages, so the passcode
+      only keeps casual visitors out — it is not real security. What actually protects your
+      site is your GitHub token, which never leaves this browser. Use a fine-grained token
+      limited to this one repository.
+    </p>
+  </div>
+</div>
+
+<!-- ===== APP ===== -->
+<div class="shell hide" id="shell">
+  <aside class="side">
+    <div class="brand">Content manager<span>portfolio/content.json</span></div>
+    <nav class="tabs" id="tabs"></nav>
+    <div class="side-foot">
+      <button class="btn btn-ghost btn-sm" id="previewBtn">Preview site</button>
+      <button class="btn btn-ghost btn-sm" id="lockBtn">Lock</button>
+    </div>
+  </aside>
+
+  <div class="body">
+    <div class="bar">
+      <h2 id="paneTitle">Profile</h2>
+      <span class="dirty hide" id="dirty">Unsaved changes</span>
+      <button class="btn btn-ghost btn-sm" id="revertBtn">Revert</button>
+      <button class="btn btn-ghost btn-sm" id="downloadBtn">Download JSON</button>
+      <button class="btn btn-accent btn-sm" id="publishBtn">Publish</button>
+    </div>
+    <div class="pane" id="pane"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

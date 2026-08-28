@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "site": {
+    "title": "Md Munna — IT System Administrator & Network Engineer",
+    "description": "Md Munna — IT System Administrator and Network Engineer based in Dhaka, Bangladesh. Infrastructure, networking, automation, and AI-powered enterprise reporting.",
+    "url": "https://munna-it360.github.io/portfolio/",
+    "ogImage": "img/og-cover.png",
+    "locale": "en"
+  },
+  "profile": {
+    "name": "Md Munna",
+    "shortName": "Munna",
+    "initial": "M",
+    "avatar": "https://avatars.githubusercontent.com/u/174939525?v=4",
+    "typedRoles": [
+      "System Administrator",
+      "Network Engineer",
+      "Infrastructure Specialist",
+      "AI Integration Engineer",
+      "Full-stack Developer"
+    ],
+    "location": "Dhaka, Bangladesh",
+    "timezone": "Asia/Dhaka",
+    "email": "munna.it360@gmail.com",
+    "phone": "+880 1405-090089",
+    "phoneRaw": "+8801405090089",
+    "cvUrl": "Md_Munna_CV.pdf",
+    "available": true,
+    "availableText": "Open to new opportunities"
+  },
+  "nav": [
+    { "id": "home", "label": "About" },
+    { "id": "works", "label": "Works" },
+    { "id": "services", "label": "Services" },
+    { "id": "resume", "label": "Resume" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "contact", "label": "Contact" }
+  ],
+  "hero": {
+    "greeting": "Hello, I'm",
+    "headline": "IT System Administrator {&} Network Engineer based in {Dhaka, Bangladesh}.",
+    "intro": "4+ years architecting and maintaining high-availability, secure infrastructure for 300+ user environments. Full-stack management — from network security and virtualization to automation, monitoring, and AI-powered enterprise reporting. Actively advancing in Cloud and DevOps.",
+    "primaryCta": { "label": "Hire Me", "href": "#contact" },
+    "secondaryCta": { "label": "My Works", "href": "#works" },
+    "statusLabel": "infra.status",
+    "stats": [
+      { "id": "s1", "value": 4, "suffix": "+", "label": "Years of experience" },
+      { "id": "s2", "value": 99, "suffix": "%", "label": "Uptime, critical services" },
+      { "id": "s3", "value": 300, "suffix": "+", "label": "Users supported" },
+      { "id": "s4", "value": 4, "suffix": "", "label": "Professional certifications" }
+    ]
+  },
+  "socials": [
+    { "id": "so1", "platform": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/md-munna-253269177/", "visible": true },
+    { "id": "so2", "platform": "github", "label": "GitHub", "url": "https://github.com/munna-it360", "visible": true },
+    { "id": "so3", "platform": "youtube", "label": "YouTube", "url": "https://www.youtube.com/@munna-it360", "visible": true },
+    { "id": "so4", "platform": "facebook", "label": "Facebook", "url": "https://www.facebook.com/munna.it360", "visible": true },
+    { "id": "so5", "platform": "whatsapp", "label": "WhatsApp", "url": "https://wa.me/8801405090089", "visible": true },
+    { "id": "so6", "platform": "telegram", "label": "Telegram", "url": "https://t.me/munna_it360", "visible": true },
+    { "id": "so7", "platform": "x", "label": "X", "url": "https://x.com/munna_it360", "visible": true },
+    { "id": "so8", "platform": "instagram", "label": "Instagram", "url": "https://www.instagram.com/munna.it360", "visible": true },
+    { "id": "so9", "platform": "email", "label": "Email", "url": "mailto:munna.it360@gmail.com", "visible": true },
+    { "id": "so10", "platform": "phone", "label": "Phone", "url": "tel:+8801405090089", "visible": false }
+  ],
+  "workCategories": [
+    { "id": "all", "label": "All" },
+    { "id": "ai", "label": "AI" },
+    { "id": "infra", "label": "Infrastructure" },
+    { "id": "web", "label": "Web" },
+    { "id": "automation", "label": "Automation" }
+  ],
+  "works": [
+    {
+      "id": "w1",
+      "visible": true,
+      "category": "infra",
+      "tag": "Infrastructure",
+      "icon": "server",
+      "title": "Physical-to-Virtual Migration & Network Redesign",
+      "summary": "Migrated physical servers to high-availability Proxmox VE + Docker; redesigned the network as segmented VLANs on Cisco & MikroTik with VRRP and stateful firewalls; own the corporate email platform (Zextras Carbonio/Zimbra) end to end with Zabbix monitoring in front of it all.",
+      "value": "99% uptime for critical services, 30% better resource utilization, 24/7 secure communication for every user.",
+      "chips": ["Proxmox VE", "Docker", "Cisco / MikroTik", "Zabbix"],
+      "links": []
+    },
+    {
+      "id": "w2",
+      "visible": true,
+      "category": "ai",
+      "tag": "AI · Reporting",
+      "icon": "chip",
+      "title": "Conversational AI over a Live ERP",
+      "summary": "Led the build and hardening of an AI reporting platform — chat interface plus KPI dashboards over two company databases — auditing every SQL tool the model can call and fixing critical data bugs, including an 8.9× KPI inflation error caught before it reached leadership.",
+      "value": "Verified answers in seconds instead of days, over an $84M+ LC portfolio.",
+      "chips": ["FastAPI", "React + TS", "SQL Server", "LLM tool-calling"],
+      "links": []
+    },
+    {
+      "id": "w3",
+      "visible": true,
+      "category": "ai",
+      "tag": "AI · On-premise",
+      "icon": "shield",
+      "title": "Group KPI Platform with Fully Local AI",
+      "summary": "Three-tier architecture — production ERP, isolated report server, dedicated GPU inference node — so the AI assistant runs entirely on-premise, with role-based views for executives, finance, operations, and audit.",
+      "value": "Board-level data gets AI-grade analysis while never leaving the company network.",
+      "chips": ["Node.js", "Local LLM", "Embeddings", "RBAC"],
+      "links": []
+    },
+    {
+      "id": "w4",
+      "visible": true,
+      "category": "automation",
+      "tag": "Automation",
+      "icon": "gear",
+      "title": "Customs Declaration Automation (ASYCUDA)",
+      "summary": "Desktop tool with an embedded database of 500+ company profiles, OCR with image preprocessing, and direct generation of submission-ready customs XML from scanned Bill of Entry documents.",
+      "value": "Hours of error-prone typing → seconds of automated extraction; 100% field accuracy on digital documents.",
+      "chips": ["Python", "Tesseract OCR", "OpenCV", "XML"],
+      "links": []
+    },
+    {
+      "id": "w5",
+      "visible": true,
+      "category": "web",
+      "tag": "Web · E-commerce",
+      "icon": "code",
+      "title": "Retail Storefronts, End to End",
+      "summary": "Complete e-commerce experiences — storefront, cart & coupon logic, zone-based delivery pricing, order tracking, PDF invoicing, and full staff admin panels — plus a staging deployment on Node.js and PostgreSQL.",
+      "value": "Operations-complete online businesses without enterprise licensing costs.",
+      "chips": ["Node.js", "PostgreSQL", "PHP 8", "MySQL"],
+      "links": [
+        { "label": "eons-it-store", "url": "https://github.com/munna-it360/eons-it-store" },
+        { "label": "gj-lifestyle-demo", "url": "https://github.com/munna-it360/gj-lifestyle-demo" }
+      ]
+    },
+    {
+      "id": "w6",
+      "visible": true,
+      "category": "infra",
+      "tag": "Security",
+      "icon": "mail",
+      "title": "Email & Identity Hardening (Microsoft 365)",
+      "summary": "Audited every mailbox for suspicious forwarding rules via PowerShell, blocked external auto-forwarding at policy level, disabled legacy authentication, and wired up alerting for new rule creation.",
+      "value": "A silent, high-impact breach vector eliminated — before an incident, not after one.",
+      "chips": ["Exchange Online", "PowerShell", "Defender"],
+      "links": []
+    }
+  ],
+  "services": [
+    {
+      "id": "sv1",
+      "visible": true,
+      "icon": "server",
+      "title": "Server & Virtualization Infrastructure",
+      "description": "Physical-to-virtual migration, Proxmox VE & Docker platform design, Windows & Linux server administration, and backup/disaster-recovery discipline — engineered for 99% uptime and 100% data integrity."
+    },
+    {
+      "id": "sv2",
+      "visible": true,
+      "icon": "network",
+      "title": "Network Design & Security",
+      "description": "Segmented VLAN architecture on Cisco & MikroTik with VRRP and stateful firewalls — certified engineering (CCNA, MTCNA/RE/SE) that eliminates single points of failure and hardens the perimeter."
+    },
+    {
+      "id": "sv3",
+      "visible": true,
+      "icon": "chip",
+      "title": "AI-Powered Enterprise Reporting",
+      "description": "LLM integration over live ERP data with fully on-premise inference. Executives get verified answers in seconds — every AI query audited like production code, and data never leaves the network."
+    },
+    {
+      "id": "sv4",
+      "visible": true,
+      "icon": "gear",
+      "title": "Monitoring, Automation & Email Systems",
+      "description": "Zabbix proactive monitoring, n8n + Python/Bash/PowerShell automation, and end-to-end enterprise email ownership (Carbonio/Zimbra, DNS/SPF/DKIM, Microsoft 365 hardening)."
+    }
+  ],
+  "experience": [
+    {
+      "id": "e1",
+      "visible": true,
+      "period": "2024 — Present",
+      "role": "Senior Executive, IT",
+      "org": "Union Limited · Dhaka, Bangladesh",
+      "description": "Infrastructure modernization to Proxmox VE & Docker (30% better utilization, 99% uptime). Segmented VLAN network on Cisco & MikroTik with VRRP and stateful firewalls. End-to-end ownership of the corporate email platform. Zabbix monitoring with n8n + Bash/Python automation. Vendor & SLA management; AI-powered ERP reporting at executive level."
+    },
+    {
+      "id": "e2",
+      "visible": true,
+      "period": "2021 — 2024",
+      "role": "Executive, IT",
+      "org": "Union Limited · Dhaka, Bangladesh",
+      "description": "Tier 1/2 technical support for 250+ end-users with staff productivity above 98%. Daily backup and disaster recovery with 100% data integrity. Standardized workstation lifecycle (OS imaging, software configuration, email setup), cutting onboarding time by 40%."
+    }
+  ],
+  "certifications": [
+    {
+      "id": "c1",
+      "visible": true,
+      "issuer": "Cisco",
+      "title": "CCNA — Cisco Certified Network Associate",
+      "org": "Cisco Systems",
+      "description": "Enterprise networking fundamentals: routing & switching, IP services, security fundamentals, and network automation.",
+      "image": "certs/ccna.jpg",
+      "inProgress": false
+    },
+    {
+      "id": "c2",
+      "visible": true,
+      "issuer": "MikroTik",
+      "title": "MTCNA — Certified Network Associate",
+      "org": "MikroTik",
+      "description": "RouterOS administration: routing, bridging, wireless, firewall/NAT, QoS, and tunneling fundamentals.",
+      "image": "certs/mtcna.jpg",
+      "inProgress": false
+    },
+    {
+      "id": "c3",
+      "visible": true,
+      "issuer": "MikroTik",
+      "title": "MTCRE — Certified Routing Engineer",
+      "org": "MikroTik",
+      "description": "Advanced routing: static & dynamic routing (OSPF), VPN tunneling, and complex multi-network design.",
+      "image": "certs/mtcre.jpg",
+      "inProgress": false
+    },
+    {
+      "id": "c4",
+      "visible": true,
+      "issuer": "MikroTik",
+      "title": "MTCSE — Certified Security Engineer",
+      "org": "MikroTik",
+      "description": "Network security engineering: attack mitigation, firewall hardening, secure tunnels, and IPsec.",
+      "image": "certs/mtcse.jpg",
+      "inProgress": false
+    },
+    {
+      "id": "c5",
+      "visible": true,
+      "issuer": "In Progress",
+      "title": "AWS Solutions Architect — Associate",
+      "org": "Amazon Web Services",
+      "description": "Designing resilient, high-performing, secure, and cost-optimized architectures on AWS Cloud.",
+      "image": "",
+      "inProgress": true
+    },
+    {
+      "id": "c6",
+      "visible": true,
+      "issuer": "In Progress",
+      "title": "AI Systems Engineering",
+      "org": "Professional development",
+      "description": "Engineering discipline for production AI systems: LLM integration, evaluation, and deployment guardrails.",
+      "image": "",
+      "inProgress": true
+    }
+  ],
+  "education": [
+    {
+      "id": "ed1",
+      "visible": true,
+      "period": "2022",
+      "degree": "B.Sc. in Computer Science",
+      "institution": "Fareast International University",
+      "detail": "CGPA 3.40 out of 4.00."
+    },
+    {
+      "id": "ed2",
+      "visible": true,
+      "period": "2014",
+      "degree": "Higher Secondary Certificate (Science)",
+      "institution": "Brahmanbaria Govt. College · Cumilla Board",
+      "detail": "GPA 3.30 out of 5.00."
+    },
+    {
+      "id": "ed3",
+      "visible": true,
+      "period": "2012",
+      "degree": "Secondary School Certificate (Science)",
+      "institution": "Bijeshwar A. Monem High School · Cumilla Board",
+      "detail": "GPA 4.19 out of 5.00."
+    }
+  ],
+  "skills": {
+    "featured": [
+      { "id": "f1", "visible": true, "name": "Proxmox VE", "note": "Virtualization", "percent": 90 },
+      { "id": "f2", "visible": true, "name": "MikroTik", "note": "MTCNA · MTCRE · MTCSE", "percent": 90 },
+      { "id": "f3", "visible": true, "name": "Cisco Networking", "note": "CCNA certified", "percent": 85 },
+      { "id": "f4", "visible": true, "name": "Python", "note": "Automation & tooling", "percent": 80 }
+    ],
+    "groups": [
+      {
+        "id": "g1",
+        "visible": true,
+        "title": "Tools & Platforms",
+        "items": [
+          { "id": "i1", "name": "Linux / Windows Server", "level": "85%", "percent": 85 },
+          { "id": "i2", "name": "Zabbix", "level": "85%", "percent": 85 },
+          { "id": "i3", "name": "n8n Automation", "level": "80%", "percent": 80 },
+          { "id": "i4", "name": "Docker", "level": "75%", "percent": 75 },
+          { "id": "i5", "name": "SQL Server · PostgreSQL", "level": "75%", "percent": 75 },
+          { "id": "i6", "name": "LLM Integration (local inference)", "level": "75%", "percent": 75 }
+        ]
+      },
+      {
+        "id": "g2",
+        "visible": true,
+        "title": "Scripting & Languages",
+        "items": [
+          { "id": "i7", "name": "Bash", "level": "80%", "percent": 80 },
+          { "id": "i8", "name": "PowerShell", "level": "75%", "percent": 75 },
+          { "id": "i9", "name": "JavaScript / Node.js / React", "level": "70%", "percent": 70 },
+          { "id": "i10", "name": "Bangla", "level": "Native", "percent": 100 },
+          { "id": "i11", "name": "English", "level": "Professional", "percent": 85 }
+        ]
+      }
+    ],
+    "knowledgeTitle": "Soft Skills & Knowledge",
+    "knowledge": [
+      "Problem solving & root-cause analysis",
+      "Cross-functional collaboration",
+      "Vendor management & SLA negotiation",
+      "Communication & leadership",
+      "High-availability infrastructure design",
+      "Backup & disaster recovery",
+      "Least-privilege & RBAC access design",
+      "KPI reconciliation & data auditing",
+      "Technical documentation culture",
+      "Time management & adaptability"
+    ]
+  },
+  "contact": {
+    "heading": "Let's make your project {brilliant!}",
+    "formNote": "Submitting opens your email app with the message pre-filled — no data is stored on this site.",
+    "formspreeId": ""
+  },
+  "footer": {
+    "text": "© {year} Md Munna · Dhaka, Bangladesh"
+  }
+}
